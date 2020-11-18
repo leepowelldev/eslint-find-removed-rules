@@ -52,7 +52,6 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "eslint-find-rules": "^3.6.1",
-    "jest-mock-console": "^1.0.1",
     "lodash.difference": "^4.5.0"
   },
   "devDependencies": {
