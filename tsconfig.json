@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "rootDir": "./src",
+    "outDir": "./",
+    "alwaysStrict": true,
+    "strict": true,
+    "module": "commonjs",
+    "declaration": true,
+    "esModuleInterop": true
+  },
+  "include": ["**/*"],
+  "exclude": [""]
+}
