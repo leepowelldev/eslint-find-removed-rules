@@ -4,8 +4,8 @@ module.exports = {
   restoreMocks: true,
   roots: ['<rootDir>/src'],
   testMatch: [
-    'src/**/__tests__/**/*.+(ts|tsx|js)',
-    'src/**/?(*.)+(spec|test).+(ts|tsx|js)',
+    '**/__tests__/**/*.+(ts|tsx|js)',
+    '**/?(*.)+(spec|test).+(ts|tsx|js)',
   ],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
