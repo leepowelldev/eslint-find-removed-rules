@@ -18,14 +18,14 @@
   },
   "license": "ISC",
   "author": "Lee Powell <lee@leepowell.dev>",
-  "main": "lib/find.js",
-  "types": "lib/find.d.ts",
+  "main": "dist/find.js",
+  "types": "dist/find.d.ts",
   "files": [
-    "bin/cli.js",
-    "lib/find.js"
+    "dist/cli.js",
+    "dist/find.js"
   ],
   "bin": {
-    "eslint-find-removed-rules": "bin/cli.js"
+    "eslint-find-removed-rules": "dist/cli.js"
   },
   "scripts": {
     "test": "jest",
@@ -37,7 +37,7 @@
     "lint": "eslint --report-unused-disable-directives",
     "lint:fix": "npm run lint -- --fix",
     "semantic-release": "semantic-release",
-    "clean": "del bin lib",
+    "clean": "del dist",
     "prebuild": "npm-run-all clean test:ci format:ci lint",
     "build": "tsc -b tsconfig.prod.json"
   },
