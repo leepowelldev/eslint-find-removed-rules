@@ -14,7 +14,12 @@
   "extends": [
     "eslint:recommended",
     "plugin:jest/recommended",
-    "plugin:jest/style",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:jest/style"
+  ],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@typescript-eslint/recommended"]
+    }
   ]
 }
