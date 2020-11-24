@@ -1,6 +1,6 @@
 {
   "name": "eslint-find-removed-rules",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Find rules removed from a ESLint config",
   "keywords": [
     "eslint",

@@ -1,5 +1,12 @@
 # CHANGELOG
 
+# [1.1.0](https://github.com/leepowelldev/eslint-find-removed-rules/compare/v1.0.0...v1.1.0) (2020-11-24)
+
+
+### Features
+
+* added ability to ignore rules ([2412d66](https://github.com/leepowelldev/eslint-find-removed-rules/commit/2412d667aa888d47acbdd223650c1d9ad092cedc))
+
 # 1.0.0 (2020-11-19)
 
 
