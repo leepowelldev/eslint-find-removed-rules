@@ -1,3 +1,5 @@
+import { normalize } from 'path';
+
 describe('cli', () => {
   let logSpy: jest.SpyInstance;
   const noop = () => undefined;
@@ -11,6 +13,7 @@ describe('cli', () => {
     // Arrange
     const path = 'path/to/config';
     process.argv[2] = path;
+
     const mock = jest.fn().mockReturnValue([]);
     jest.mock('./find', () => mock);
 
@@ -18,7 +21,7 @@ describe('cli', () => {
     require('./cli');
 
     // Asset
-    expect(mock).toHaveBeenCalledWith(path);
+    expect(mock).toHaveBeenCalledWith(path, undefined);
   });
 
   it('should output result message to console', () => {
@@ -45,5 +48,38 @@ describe('cli', () => {
     expect(logSpy).toHaveBeenCalledWith(
       expect.stringContaining('No rules removed from ESLint config file.')
     );
+  });
+
+  it('should accept `ignore-path` argument', () => {
+    // Arrange
+    const path = 'path/to/config';
+    process.argv[2] = '--ignore-path';
+    process.argv[3] = require.resolve('../fixtures/ignore.txt');
+    process.argv[4] = path;
+
+    const mock = jest.fn().mockReturnValue([]);
+    jest.mock('./find', () => mock);
+
+    // Act
+    require('./cli');
+
+    // Assert
+    expect(mock).toHaveBeenCalledWith(path, { ignore: ['a', 'c', 'e'] });
+  });
+
+  it('should throw if `ignore-path` file does not exist', () => {
+    // Arrange
+    const path = 'path/to/config';
+    process.argv[2] = '--ignore-path';
+    process.argv[3] = normalize('../fixtures/ignore-2.txt');
+    process.argv[4] = path;
+
+    const mock = jest.fn().mockReturnValue([]);
+    jest.mock('./find', () => mock);
+
+    // Assert
+    expect(() => {
+      require('./cli');
+    }).toThrow('Path to ignore file does not exist');
   });
 });
