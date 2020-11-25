@@ -16,6 +16,9 @@
     "plugin:jest/recommended",
     "plugin:jest/style"
   ],
+  "rules": {
+    "no-console": "error"
+  },
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
