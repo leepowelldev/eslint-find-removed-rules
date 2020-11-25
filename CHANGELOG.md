@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.1.1](https://github.com/leepowelldev/eslint-find-removed-rules/compare/v1.1.0...v1.1.1) (2020-11-25)
+
+
+### Bug Fixes
+
+* removed console log missed by lint ([f9135bb](https://github.com/leepowelldev/eslint-find-removed-rules/commit/f9135bb522b149301ea24d8a425450fb6bbc83b9))
+
 # [1.1.0](https://github.com/leepowelldev/eslint-find-removed-rules/compare/v1.0.0...v1.1.0) (2020-11-24)
 
 
