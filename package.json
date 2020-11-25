@@ -34,7 +34,7 @@
     "format": "prettier --ignore-unknown .",
     "format:write": "npm run format -- --write",
     "format:ci": "npm run format -- --check",
-    "lint": "eslint --report-unused-disable-directives",
+    "lint": "eslint --report-unused-disable-directives .",
     "lint:fix": "npm run lint -- --fix",
     "semantic-release": "semantic-release",
     "clean": "del dist",
