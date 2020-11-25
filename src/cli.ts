@@ -9,8 +9,6 @@ const configPath = args?._?.[0] ?? '';
 const ignorePath = (args?.['ignore-path'] as string) || undefined;
 let options: Options | undefined;
 
-console.log(process.argv);
-
 if (ignorePath) {
   if (!existsSync(ignorePath)) {
     throw Error('Path to ignore file does not exist');
