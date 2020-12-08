@@ -42,7 +42,6 @@
     "build": "tsc -b tsconfig.prod.json"
   },
   "dependencies": {
-    "chalk": "^4.1.0",
     "eslint-find-rules": "^3.6.1",
     "lodash.difference": "^4.5.0",
     "minimist": "^1.2.5"

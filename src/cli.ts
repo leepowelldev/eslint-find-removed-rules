@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import minimist from 'minimist';
-import chalk from 'chalk';
 import { readFileSync, existsSync } from 'fs';
 import findRemovedRules, { Options } from './find';
 
@@ -26,12 +25,10 @@ if (ignorePath) {
 }
 
 const { log } = console;
-const { red, white, green } = chalk;
 const rules = findRemovedRules(configPath, options);
 
 if (rules.length) {
-  log(red(`Rules removed from ESLint config file:`));
-  rules.forEach((rule) => log(white(rule)));
-} else {
-  log(green(`No rules removed from ESLint config file.`));
+  log(`removed rules`);
+  log(``);
+  rules.forEach((rule) => log(rule));
 }

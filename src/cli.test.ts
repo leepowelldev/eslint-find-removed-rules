@@ -32,8 +32,9 @@ describe('cli', () => {
     require('./cli');
 
     // Assert
-    expect(logSpy).toHaveBeenCalledWith(
-      expect.stringContaining(`Rules removed from ESLint config file:`)
+    expect(logSpy).toHaveBeenCalledTimes(4);
+    expect(logSpy.mock.calls).toStrictEqual(
+      expect.arrayContaining([['removed rules'], [''], ['a'], ['b']])
     );
   });
 
@@ -45,9 +46,7 @@ describe('cli', () => {
     require('./cli');
 
     // Assert
-    expect(logSpy).toHaveBeenCalledWith(
-      expect.stringContaining('No rules removed from ESLint config file.')
-    );
+    expect(logSpy).not.toHaveBeenCalled();
   });
 
   it('should accept `ignore-path` argument', () => {
