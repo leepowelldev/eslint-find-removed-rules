@@ -1,5 +1,12 @@
 # CHANGELOG
 
+# [1.2.0](https://github.com/leepowelldev/eslint-find-removed-rules/compare/v1.1.1...v1.2.0) (2020-12-08)
+
+
+### Features
+
+* added support for comments in ignore file ([74aad49](https://github.com/leepowelldev/eslint-find-removed-rules/commit/74aad492bd36f3745eb9e7dbe62b23047b5a71ca))
+
 ## [1.1.1](https://github.com/leepowelldev/eslint-find-removed-rules/compare/v1.1.0...v1.1.1) (2020-11-25)
 
 
