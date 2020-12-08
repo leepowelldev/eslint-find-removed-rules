@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.2.1](https://github.com/leepowelldev/eslint-find-removed-rules/compare/v1.2.0...v1.2.1) (2020-12-08)
+
+
+### Bug Fixes
+
+* updated cli interface to resemble eslint-find-rules output ([75ac692](https://github.com/leepowelldev/eslint-find-removed-rules/commit/75ac692c142f095efa0bad033120e951518eb923))
+
 # [1.2.0](https://github.com/leepowelldev/eslint-find-removed-rules/compare/v1.1.1...v1.2.0) (2020-12-08)
 
 
