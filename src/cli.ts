@@ -19,6 +19,7 @@ if (ignorePath) {
     .replace(/\r\n/g, '\n')
     .split('\n')
     .map((rule) => rule.trim())
+    .filter((rule) => rule.charAt(0) !== '#')
     .filter((rule) => rule.length > 0);
 
   options = { ignore };
