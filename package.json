@@ -41,16 +41,6 @@
     "prebuild": "npm-run-all clean test:ci format:ci lint",
     "build": "tsc -b tsconfig.prod.json"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm test && lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": "eslint --report-unused-disable-directives --fix",
-    "*": "prettier --write --ignore-unknown"
-  },
   "dependencies": {
     "chalk": "^4.1.0",
     "eslint-find-rules": "^3.6.1",
